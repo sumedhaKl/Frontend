@@ -27,19 +27,27 @@
     </style>
 </head>
 <script>
-    function extendText(){
-    const extendTextElement = document.getElementById("extendText");
-    const randomIndex = Math.floor(Math.random() * extendTexts.length);
-    const randomText = extendTexts[randomIndex];
-    extendTextElement.textContent = randomText;
-}
-    
-document.getElementById("printButton").addEventListener("click", extendText);
+    function extendText() {
+        const extendTextElement = document.getElementById("extendText");
+        const inputTextElement = document.getElementById("inputText");
+
+        // Get the input text from the input field
+        const inputText = inputTextElement.value;
+
+        // Extend the input text
+        const extendedText = inputText + " (extended)";
+
+        // Display the extended text
+        extendTextElement.textContent = extendedText;
+    }
+
+    document.getElementById("printButton").addEventListener("click", extendText);
 </script>
 <body>
     <h1>Extending Text</h1>
+    <label for="inputText">Enter some text: </label>
+    <input type="text" id="inputText">
     <p id="extendText">Click the button to display extended text here.</p>
     <button id="printButton">Print Extended Text</button>
 </body>
-
 </html>
