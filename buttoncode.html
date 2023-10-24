@@ -1,68 +1,45 @@
-{
- "cells": [
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "vscode": {
-     "languageId": "html"
-    }
-   },
-   "outputs": [],
-   "source": [
-    "<!DOCTYPE html>\n",
-    "<html>\n",
-    "<head>\n",
-    "    <title>Text Extender</title>\n",
-    "    <style>\n",
-    "        body {\n",
-    "            font-family: 'Arial', sans-serif;\n",
-    "            background-color: #f0f0f0;\n",
-    "            color: #333;\n",
-    "        }\n",
-    "        h1 {\n",
-    "            color: blue;\n",
-    "        }\n",
-    "        p {\n",
-    "            font-size: 18px;\n",
-    "        }\n",
-    "        button {\n",
-    "            background-color: blue;\n",
-    "            color: white;\n",
-    "            padding: 10px 20px;\n",
-    "            border: none;\n",
-    "            cursor: pointer;\n",
-    "        }\n",
-    "        button:hover {\n",
-    "            background-color: blue;\n",
-    "        }\n",
-    "    </style>\n",
-    "</head>\n",
-    "<script>\n",
-    "    function extendText(){\n",
-    "    const extendTextElement = document.getElementById(\"extendText\");\n",
-    "    const randomIndex = Math.floor(Math.random() * extendTexts.length);\n",
-    "    const randomText = extendTexts[randomIndex];\n",
-    "    extendTextElement.textContent = randomText;\n",
-    "}\n",
-    "    \n",
-    "document.getElementById(\"printButton\").addEventListener(\"click\", extendText);\n",
-    "</script>\n",
-    "<body>\n",
-    "    <h1>Extending Text</h1>\n",
-    "    <p id=\"extendText\">Click the button to display extended text here.</p>\n",
-    "    <button id=\"printButton\">Print Extended Text</button>\n",
-    "</body>\n",
-    "\n",
-    "</html>\n"
-   ]
-  }
- ],
- "metadata": {
-  "language_info": {
-   "name": "python"
-  }
- },
- "nbformat": 4,
- "nbformat_minor": 2
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Extender</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        h1 {
+            color: blue;
+        }
+        p {
+            font-size: 18px;
+        }
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: blue;
+        }
+    </style>
+</head>
+<script>
+    function extendText(){
+    const extendTextElement = document.getElementById("extendText");
+    const randomIndex = Math.floor(Math.random() * extendTexts.length);
+    const randomText = extendTexts[randomIndex];
+    extendTextElement.textContent = randomText;
 }
+    
+document.getElementById("printButton").addEventListener("click", extendText);
+</script>
+<body>
+    <h1>Extending Text</h1>
+    <p id="extendText">Click the button to display extended text here.</p>
+    <button id="printButton">Print Extended Text</button>
+</body>
+
+</html>
